@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>example html</title>
-  
-
-</head>
-<body>
+    {% include 'details/links.html ' %}
+    {% include 'details/menu.html ' %}
     <div id="chartdiv"></div>
     <style>
         #chartdiv {
@@ -123,6 +114,7 @@
             "country": "{{post.nomi}}",
             "value": {{ post.daromadi }}
         }, {% endfor %}];
+    
         
         xAxis.data.setAll(data);
         series.data.setAll(data);
@@ -215,5 +207,5 @@
         
         <!-- HTML -->
         
-</body>
-</html>
+        
+{% include 'details/footer.html ' %}
